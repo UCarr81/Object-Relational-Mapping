@@ -49,7 +49,7 @@ router.post('/', async (req, res) => {
   // create a new category
 
 try {
-  const Category = await Category.create(req.body);
+  const newCategory = await Category.create(req.body);
   res.status(201).json(Category);
 } catch (err) {
   console.error(err);
